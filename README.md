@@ -38,4 +38,4 @@ MIT License。詳細は [LICENSE](./LICENSE)。
 
 ## 版
 
-v1.20
+v1.21
