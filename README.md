@@ -1,10 +1,22 @@
 # Kurione
 
+<p align="center"><img src="assets/kurione-baton.png" width="240" alt="Kurione のマスコット（指揮棒を持つクリオネ）"></p>
+
 Kurione: a commander workflow for Claude Code (orchestrator–subagent pattern)
 
 ## 名前の意味
 
 Kurione はクリオネ。クリオネは透明で、中身が透けて見える。判断・依頼・状態メモ・報告が見える運用を目指す。
+
+## マスコット
+
+<p align="center">
+<img src="assets/kurione-simple.png" width="200" alt="Kurione のマスコット（シンプル版）">
+<img src="assets/kurione-baton.png" width="200" alt="Kurione のマスコット（指揮棒を持つクリオネ）">
+<img src="assets/kurione-family.png" width="200" alt="Kurione のマスコット（家族）">
+</p>
+
+画像は AI（OpenAI の画像生成）で作成。
 
 ## 何をするか
 
@@ -21,6 +33,8 @@ Kurione はクリオネ。クリオネは透明で、中身が透けて見える
 ## ライセンス
 
 MIT License。詳細は [LICENSE](./LICENSE)。
+
+画像（assets/）は、生成サービスの利用条件に従う。
 
 ## 版
 
