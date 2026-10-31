@@ -18,6 +18,10 @@ Kurione はクリオネ。クリオネは透明で、中身が透けて見える
 - [GitLab 版](./commander-workflow-gitlab.md): MR の管理に GitLab（glab）を使う場合
 - [GitHub 版](./commander-workflow-github.md): MR（PR）の管理に GitHub を使う場合
 
+## ライセンス
+
+MIT License。詳細は [LICENSE](./LICENSE)。
+
 ## 版
 
 v1.20
