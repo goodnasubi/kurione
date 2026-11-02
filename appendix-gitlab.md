@@ -197,7 +197,7 @@ description: 司令塔として MR、Issue、push、マージ、レビュー依�
 
 ## A.3 権限の設定
 
-核の 3.3 の `allow` に、次を足す（既存の項目は消さない）。
+核の 3.3 の `allow` に、次を足す（既存の項目は消さない）。足す先の settings は、核の手順 4 のとおり（ユーザー共通は `~/.claude/settings.json`、リポ専用は既定で `.claude/settings.local.json`）。
 
 ```json
 "Bash(glab mr create:*)", "Bash(glab mr view:*)", "Bash(glab mr diff:*)",
