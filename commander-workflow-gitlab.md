@@ -1,6 +1,6 @@
 # 司令塔方式 Kurione の導入手順（GitLab 版）: 転送案内
 
-v2.0 から、手順書を核と付録に分けた。この案内は v2.1 で削除する。
+v2.0 から、手順書を核と付録に分けた。この案内は v2.2 で削除する。
 
 - 核: [kurione.md](./kurione.md)
 - 付録（GitLab）: [appendix-gitlab.md](./appendix-gitlab.md)

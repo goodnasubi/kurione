@@ -6,7 +6,7 @@ Kurione: a commander workflow for Claude Code (orchestrator–subagent pattern)
 
 ## 名前の意味
 
-Kurione はクリオネ。クリオネは透明で、中身が透けて見える。判断・依頼・状態メモ・報告が見える運用を目指す。
+Kurione はクリオネ。クリオネは透明で、中身が透けて見える。判断、依頼、状態メモ、報告が見える運用を目指す。
 
 ## マスコット
 
@@ -34,7 +34,7 @@ Kurione はクリオネ。クリオネは透明で、中身が透けて見える
 - [付録 GitHub](./appendix-github.md): PR の管理に GitHub（gh）を使う場合
 - [coordinator.md](./coordinator.md): 任意。調整役（複数セッションで共用資源を排他する拡張）
 
-使い方: kurione.md と、使うホストの付録を Claude Code に読ませて、「導入して」と頼む。
+使い方: kurione.md だけで導入できる。付録は任意（ホストの CLI で MR か PR と Issue を扱いたいときに足す）。
 
 ## ライセンス
 
@@ -44,4 +44,4 @@ MIT License。詳細は [LICENSE](./LICENSE)。
 
 ## 版
 
-v2.0（2026-11-02）
+v2.1（2026-11-02）
