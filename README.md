@@ -34,6 +34,7 @@ Kurione はクリオネ。クリオネは透明で、中身が透けて見える
 - [付録 GitHub](./appendix-github.md): PR の管理に GitHub（gh）を使う場合
 - [coordinator.md](./coordinator.md): 任意。調整役（複数セッションで共用資源を排他する拡張）
 - [window.md](./window.md): 任意。窓口（人への質問と回答を集約する拡張。任意で秘書役の節あり。試行中）
+- [subordinate.md](./subordinate.md): 任意。部下セッション（上位の司令塔から作業を受け、MR まで進める別セッション。試行中）
 
 使い方: kurione.md だけで導入できる。付録は任意（ホストの CLI で MR か PR と Issue を扱いたいときに足す）。
 
@@ -45,4 +46,4 @@ MIT License。詳細は [LICENSE](./LICENSE)。
 
 ## 版
 
-v2.3（2026-11-13）
+v2.4（2026-11-24）
