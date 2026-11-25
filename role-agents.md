@@ -12,7 +12,7 @@ Kurione の拡張。版: 2026-11-25（v2.5。核 kurione.md の版に対応）
 ## 何か
 
 - 役ごとに `.claude/agents/<役>.md` を置き、`claude --agent <役>` で、その役としてセッションを起動する。
-- 本文は、Claude Code 既定の system prompt を置き換える。CLAUDE.md とメモリは、通常どおり読み込まれる。
+- 本文は、Claude Code 既定の system prompt を置き換える。CLAUDE.md とメモリは、通常どおり読み込まれる（公式文書の記述。実機では、本文の効きだけを確認）。
 
 ## 書き方
 
@@ -34,7 +34,8 @@ Kurione の拡張。版: 2026-11-25（v2.5。核 kurione.md の版に対応）
 ## 役ごとの記憶
 
 - `memory` を指定すると、`.claude/agent-memory/<役>/` ができ、役の記憶の置き場になる。
-- `tools` に Write か Edit が無いと、記憶は書かれない。
+- 観測として、`tools` を `Read, Grep, Glob` にしたとき、記憶のフォルダは空だった。理由は未確認（公式文書は、`memory` を指定すると Read、Write、Edit が自動で有効になる、と記述している）。
+- `tools` に Write と Edit を明示した検証 8 項目では、記憶が書かれた。
 - 書き込み道具を渡すなら、本文で「書いてよいのは記録だけ」と縛る。
 
 ## 検証済み（窓口の役 1 つ。人が対話で実施。8 項目すべて合格）
@@ -46,13 +47,18 @@ Kurione の拡張。版: 2026-11-25（v2.5。核 kurione.md の版に対応）
 - 許可の代行を断る。
 - 記録が agent-memory に書かれる。
 - 再起動後に、記録を覚えている。
-- 司令塔の規則が混ざっても、邪魔にならない。
+- 司令塔の規則が混ざらない。
 
 ## 未確認
 
 - 調整役、秘書役、部下の定義。
 - `--agent` と output style を併用したときの優先順位。
 - 役ごとに CLAUDE.md を外す方法。
+- `tools` に Write を書かない場合の記憶の書き込み。
+- `memory: user` と `memory: local` の置き場。
+- `tools`、`model` 以外の項目（`disallowedTools` など）の実機の挙動。
+- `model` の `sonnet` 以外の書式。
+- 雛形が、window.md の起動時の手順と記録ファイルの運用を写していないこと。
 - 親の権限モードが `bypassPermissions`、`acceptEdits`、`auto` のとき、役の `permissionMode` が無視される点。公式文書の記述で、実機は未確認。
 
 ## 注意
@@ -76,7 +82,7 @@ Kurione の拡張。版: 2026-11-25（v2.5。核 kurione.md の版に対応）
 | --- | --- | --- |
 | `<役>` | 役の名前。ファイル名と `name` | `window`（窓口の役） |
 | `<対象セッションの範囲>` | 質問を受ける範囲 | 同じ cwd 配下のセッション。別リポ配下は対象外 |
-| `<tools>` | 使える道具 | `Read, Grep, Glob, Write, SendMessage`（記録に Write が要る） |
+| `<tools>` | 使える道具 | `Read, Grep, Glob, Write, Edit, SendMessage`（検証で使った道具は Read, Grep, Glob, Write, Edit。SendMessage は検証では未使用で、未確認） |
 | `<model>` | 使うモデル | `sonnet` |
 
 ## 雛形（窓口の定義ファイル）
@@ -102,6 +108,10 @@ memory: project
 - 既存の決定（CLAUDE.md、メモリ、過去の答え）で答えが出るものだけ、自分で答え、事後に人へ報告する。
 - 記録は agent-memory だけに書く。資格の値（ID、パスワード）は書かない。
 ````
+
+## 運用で分かったこと
+
+運用で分かったことは、ここに足す。
 
 ## 導入先との関係
 
